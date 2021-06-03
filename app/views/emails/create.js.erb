@@ -1,0 +1,4 @@
+alert("Email reçu avec succès!");
+
+document.getElementById('email-list').insertAdjacentHTML("beforebegin", "<%= j render 'email', email: @emails %>")
+

@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="row pb-5">
+        <%= link_to 'recevoir un email', emails_path, remote: true, method: :post, class:'btn btn-dark' %>
+    </div>
+    <div class="row">
+    <%= render 'email_list'  %>
+    </div>
+</div>

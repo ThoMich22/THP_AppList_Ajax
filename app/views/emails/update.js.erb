@@ -1,0 +1,15 @@
+if (<%= @email.read %>) {
+  document.getElementById('btn-read').innerHTML = "Marquer comme lu"
+  document.getElementById('btn-read').classList.remove("bg_info")
+  document.getElementById('btn-read').classList.add("bg_warning")
+  document.getElementById('<%= @email.id %>').classList.remove("bg-info")
+  document.getElementById('<%= @email.id %>').classList.add("bg-warning")
+  <%= @email.update(read: false) %>
+} else {
+  document.getElementById('btn-read').innerHTML = "Marquer comme non lu"
+  document.getElementById('btn-read').classList.add("bg_info")
+  document.getElementById('btn-read').classList.remove("bg_warning")
+  document.getElementById('<%= @email.id %>').classList.add("bg-info")
+  document.getElementById('<%= @email.id %>').classList.remove("bg-warning")
+  <%= @email.update(read: true) %>
+}

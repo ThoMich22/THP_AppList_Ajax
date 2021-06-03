@@ -1,0 +1,21 @@
+<div id="card-supp">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2><%= @emails.object%></h2>
+                <p><%= @emails.body%></p>
+            </div>
+            <div>
+            <button class="btn btn-danger px-3">
+                <%= link_to "Supprimer", email_path, remote: true, method: "delete", class:'text-decoration-none text-white mx-3'%>
+            </button> 
+            
+            <button class="btn bg-info px-3" id="btn-read">
+               
+                <%= link_to "Marquer comme lu", email_path, remote: true, method: "put", class:'text-decoration-none text-white mx-3'%>
+                    
+            </button> 
+            </div>
+        </div>
+    </div>
+</div>
